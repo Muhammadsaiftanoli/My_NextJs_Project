@@ -1,18 +1,22 @@
 import { it } from "node:test";
 "use client";
 
+type CategoryType = {
+    categories:string[]
+}
 
-
-export default function Categories() {
-   const seletItems = (items:string)=> {
-      console.log(`You have select ${items}.`);
+export default function Categories({categories}:CategoryType) {
+   const seletItems = (categoryName:string)=> {
+      console.log(`You have select ${categoryName}.`);
    }
     return (
         <>
-        <button onClick={()=>{seletItems("Mobiles")}}>Mobiles</button>
-        <button onClick={()=>{seletItems("Cars")}}>Cars</button>
-        <button onClick={()=>{seletItems("Computer")}}>Computers</button>
-        <button onClick={()=>{seletItems("Fans")}}>Fans</button>
+        {
+            categories.map((category, i) => (
+
+                <button key={category+i} onClick={()=>{seletItems(category)}} className="btn">{category}</button>
+            ))
+        }
         </>
     )
 }

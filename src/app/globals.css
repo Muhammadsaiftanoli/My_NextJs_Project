@@ -1,1 +1,15 @@
 
+.btn {
+    border-radius: 2px;
+    background-color: #008000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    margin: 2px;
+}
+
+.btn:hover {
+    background-color: #ff0000;
+    transform: scale(1.1);
+    font-weight: bold;
+    
+}

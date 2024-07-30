@@ -18,7 +18,6 @@ export default function Allproducts() {
                 <Products />
             </tbody>
         </table>
-        <Categories />
         </>
     )
 }
